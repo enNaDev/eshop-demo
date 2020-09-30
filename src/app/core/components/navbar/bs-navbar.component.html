@@ -7,11 +7,8 @@
         <i class="fa fa-music"></i>
         The Music Store
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div>
         <ul class="navbar-nav mr-auto">
         </ul>
 
@@ -27,7 +24,7 @@
               <a class="nav-link" routerLink="/login">Login</a>
             </li>
           </ng-template>
-          <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
+          <li class="x" ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
             <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ appUser.name }}
             </a>
