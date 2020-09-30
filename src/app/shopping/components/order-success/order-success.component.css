@@ -1,0 +1,23 @@
+.margin-top {
+  margin-top: 30px;
+}
+
+.card {
+  padding: 30px;
+  text-align: center;
+}
+
+.success-message {
+  display: flex;
+  justify-content: center;
+}
+
+.success-message i {
+  color: green;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+button {
+  margin: 30px;
+}
