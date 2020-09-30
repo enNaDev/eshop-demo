@@ -1,0 +1,27 @@
+<bs-navbar *ngIf="router.url!=='/'"></bs-navbar>
+
+<div *ngIf="router.url=='/'">
+  <div class="filter"></div>
+  <section>
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem *ngFor="let img of imgCarousel" class="slide">
+        <img class="carousel-img-size" [src]="img">
+      </div>
+    </ngx-slick-carousel>
+    <div class="text-and-button-positioning">
+      <!-- <img class="big-logo" src="assets/images/landing-page/seez-in-balearics-logo.svg"> -->
+      <div class="text-config">
+        <h1>Welcome to the Music Place St<i class="fa fa-headphones"></i>re...</h1>
+        <br>
+        <h3>Just pick your favorite musical instrument with its peripherals, and start creating your own music!</h3>
+      </div>
+      <div class="button-positioning">
+        <a routerLink="/products/" class="button">Get Started</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div *ngIf="router.url!=='/'" class="container">
+  <router-outlet></router-outlet>
+</div>

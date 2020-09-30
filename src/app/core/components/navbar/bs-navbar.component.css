@@ -1,0 +1,8 @@
+.dropdown-toggle,
+.dropdown-item {
+  cursor: pointer;
+}
+
+i {
+  margin: auto 8px;
+}

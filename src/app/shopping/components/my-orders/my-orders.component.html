@@ -1,0 +1,45 @@
+<h1>Orders</h1>
+<div class="header">
+  <div class="font-weight-bold">Customer</div>
+  <div class="font-weight-bold date-header">Date</div>
+  <div></div>
+</div>
+
+<ngb-accordion>
+	<ngb-panel *ngFor="let order of orders; let i = index">
+    <ng-template ngbPanelTitle>
+      <div class="row">
+        <div class="col-4 text-left">{{ order.shipping.name }}</div>
+        <div class="col-4">{{ order.datePlaced | date }}</div>
+        <a class="col-4 text-right text-primary">View</a>
+      </div>
+    </ng-template>
+		<ng-template ngbPanelContent>
+      <div class="card-body">
+        <h5 class="card-title">Order Summary</h5>
+        <p class="card-text">
+          <span class="font-weight-bold">Date placed:</span>
+          {{ order.datePlaced | date:'short' }}
+        </p>
+        <p class="card-text">
+          <span class="font-weight-bold">Shipping address:</span>
+          {{ order.shipping.address }}, {{ order.shipping.postCode }}, {{ order.shipping.city }}
+        </p>
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let item of order.items" class="list-group-item">
+            {{ item.quantity }} x {{ item.product.title }}
+            <div class="float-right">
+              {{ item.totalPrice | currency:'EUR' }}
+            </div>
+          </li>
+          <li class="list-group-item font-weight-bold">
+            Total
+            <div class="float-right">
+              {{ orderTotalPrice[i] | currency:'EUR' }}
+            </div>
+          </li>
+        </ul>
+      </div>
+		</ng-template>
+	</ngb-panel>
+</ngb-accordion>
