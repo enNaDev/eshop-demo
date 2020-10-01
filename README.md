@@ -1,6 +1,6 @@
-# Angular 10 and Firebase demo
+## Angular 10 and Firebase demo
 
-Live demo: https://e-shop-demo-70a90.web.app/
+#### Live demo: https://e-shop-demo-70a90.web.app/
 
 This is an e-shop demo for a music store. The application uses Angular 10 for the front-end and Firebase for the back-end.
 The app has only demonstration purposes and the data does not reflect the reality. Also, no transactions take place, as this is beyond the purpose of the project's scope.
