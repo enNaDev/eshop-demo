@@ -7,7 +7,7 @@ The app has only demonstration purposes and the data does not reflect the realit
 
 The main topics that are covered in this demo are:
 
--- Create an interface with Angular 10
+-- Create a User Interface with Angular 10
 
 -- Create a back-end and database with Firebase
 
